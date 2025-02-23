@@ -1,1 +1,4 @@
+srcs/backend/cert.crt
+srcs/backend/certs.key
+
 srcs/backend/certs/
