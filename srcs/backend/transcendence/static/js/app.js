@@ -4,7 +4,8 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   
   function navigate(page) {
-    let content = document.getElementById("content");
+	console.log("Navigation vers :", page);
+    let content = document.getElementById("app");
   
     fetch(`static/pages/${page}.html`)
       .then(response => response.text())
@@ -158,3 +159,5 @@ function showError(message) {
   errorDiv.style.display = "block";
   setTimeout(() => errorDiv.style.display = "none", 5000);
 }
+
+window.navigate = navigate;
