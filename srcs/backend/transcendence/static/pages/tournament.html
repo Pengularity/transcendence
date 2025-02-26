@@ -1,3 +1,38 @@
 <h1>Tournoi</h1>
 <p>Organise des tournois et affronte d’autres joueurs.</p>
-<button class="btn btn-secondary" onclick="navigate('home')">Retour à l'accueil</button>
+
+<!-- SECTION INSCRIPTION (exemple) -->
+<div id="registration-section">
+  <h2>Inscription</h2>
+  <form id="add-participant-form">
+    <input type="text" id="participant-alias" placeholder="Alias" required />
+    <select id="participant-type">
+      <option value="user">Joueur Connecté</option>
+      <option value="guest">Invité</option>
+      <option value="ia">IA</option>
+    </select>
+    <button type="submit">Ajouter</button>
+  </form>
+
+  <ul id="participants-list"></ul>
+  <button id="start-tournament-btn" disabled>Démarrer le tournoi</button>
+</div>
+
+<!-- SECTION BRACKET (exemple) -->
+<div id="bracket-section" style="display: none;">
+  <h2>Bracket</h2>
+  <div id="matches-list"></div>
+	<!-- tableau des matchs a construire ici plus tard-->
+  <button id="launch-match-btn" disabled>Lancer le match suivant</button>
+</div>
+
+<!-- SECTION RESULTATS (exemple) -->
+<div id="winner-section" style="display: none;">
+  <h2>Vainqueur</h2>
+  <p id="winner-display"></p>
+  <button id="reset-tournament-btn">Nouveau tournoi</button>
+</div>
+
+<!-- Bouton retour à l'accueil (utilise data-page ou navigate) -->
+<button class="btn btn-primary" onclick="navigate('home')">Retour à l'accueil</button>
+

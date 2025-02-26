@@ -11,6 +11,11 @@ document.addEventListener("DOMContentLoaded", function () {
       .then(response => response.text())
       .then(html => {
         content.innerHTML = html;
+		if (page === "tournament") {
+			if (window.initTournamentPage) {
+			  window.initTournamentPage();
+			}
+		}
       })
       .catch(error => {
         content.innerHTML = "<h2>Page introuvable</h2>";
