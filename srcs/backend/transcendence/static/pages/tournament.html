@@ -1,16 +1,25 @@
 <h1>Tournoi</h1>
 <p>Organise des tournois et affronte d’autres joueurs.</p>
 
-<!-- SECTION INSCRIPTION (exemple) -->
+<!-- SECTION INSCRIPTION -->
 <div id="registration-section">
   <h2>Inscription</h2>
   <form id="add-participant-form">
     <input type="text" id="participant-alias" placeholder="Alias" required />
     <select id="participant-type">
-      <option value="user">Joueur Connecté</option>
-      <option value="guest">Invité</option>
-      <option value="ia">IA</option>
+		<option value="guest">Invité</option>
+		<option value="user">Profil Connecté</option>
+		<option value="ia">IA</option>
     </select>
+
+	<!--CONTENEUR PROFILS CONNECTES-->
+	<div id="user-select-container" style="display: none;">
+		<label for="connected-user-select">Sélectionnez un profil :</label>
+		<select id="connected-user-select">
+		  <option value="">Chargement...</option>
+		</select>
+	  </div>
+
     <button type="submit">Ajouter</button>
   </form>
 
@@ -18,7 +27,7 @@
   <button id="start-tournament-btn" disabled>Démarrer le tournoi</button>
 </div>
 
-<!-- SECTION BRACKET (exemple) -->
+<!-- SECTION BRACKET  -->
 <div id="bracket-section" style="display: none;">
   <h2>Bracket</h2>
   <div id="matches-list"></div>
@@ -26,7 +35,7 @@
   <button id="launch-match-btn" disabled>Lancer le match suivant</button>
 </div>
 
-<!-- SECTION RESULTATS (exemple) -->
+<!-- SECTION RESULTATS -->
 <div id="winner-section" style="display: none;">
   <h2>Vainqueur</h2>
   <p id="winner-display"></p>
